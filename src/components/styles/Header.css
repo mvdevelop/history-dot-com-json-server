@@ -1,0 +1,32 @@
+
+.header-container {
+    padding: 1em;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.header-title img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+.header-container nav {
+    display: flex;
+    gap: 1em;
+}
+
+.header-container nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}

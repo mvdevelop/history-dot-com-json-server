@@ -1,0 +1,18 @@
+
+.content-container {}
+
+.content-container ul {
+    list-style: none;
+    display: grid;
+    gap: 1em;
+}
+
+.content-container ul li {
+    display: flex;
+    gap: 1em;
+}
+
+.content-container img {
+    width: 200px;
+    height: 200px;
+}

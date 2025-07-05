@@ -1,0 +1,27 @@
+
+{
+  "content": [
+    { "id": 1, 
+      "img": "https://www.mundocuriosidade.com.br/wp-content/uploads/2024/08/10-misterios-da-pre-historia-que-a-ciencia-nao-consegue-explicar.jpeg", 
+      "title": "Pré-História", 
+      "description": "A Pré-História é o período da história humana que antecede a invenção da escrita, começando com o surgimento dos primeiros hominídeos e terminando com o desenvolvimento da escrita, por volta de 4000 a 3500 a.C. Este longo período é marcado pela evolução humana, o desenvolvimento de ferramentas, a domesticação de animais e plantas, e a formação de estruturas sociais primitivas, estudadas principalmente através de evidências arqueológicas"},
+    { "id": 1, 
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHlx6cvddtvC4c2sjeVqw7kRm7c5rWuFcfIA&s.jpg" , 
+      "title": "Egito", 
+      "description": "Egito é um país de 100 milhões de habitantes localizado na África Setentrional. Inserido em uma região desértica, suas principais cidades ficam nas proximidades do rio Nilo. O Egito é um país africano localizado na porção nordeste do continente." }
+  ],
+  "users": [
+    {
+        "id": 1,
+        "img": "https://hips.hearstapps.com/hmg-prod/images/full-frame-shot-of-psychedelic-pattern-royalty-free-image-1602093995.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*",
+        "name": "Vinicius Dilly",
+        "ocupation": "Software Developer"
+    },
+    {
+        "id": 2,
+        "img": "https://ih1.redbubble.net/image.5042897911.7960/raf,360x360,075,t,fafafa:ca443f4786.jpg",
+        "name": "Camila Lupak",
+        "ocupation": "Revolutionary"
+    }
+  ]
+}
