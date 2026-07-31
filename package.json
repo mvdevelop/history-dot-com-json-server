@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "json-server": "json-server --watch db.json --port 3001"
@@ -32,6 +32,7 @@
     "globals": "^16.2.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
     "vite": "^7.0.0"
   }
 }
