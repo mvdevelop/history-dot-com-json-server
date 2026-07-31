@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Header from './components/Header';
-import Content from './pages/Content';
-import AddContentPage from './pages/AddContentPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header.tsx';
+import Content from './pages/Content.tsx';
+import AddContentPage from './pages/AddContentPage.tsx';
 
 const App: React.FC = () => {
   return (

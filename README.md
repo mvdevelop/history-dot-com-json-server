@@ -1,5 +1,4 @@
-
-## ⏳ History.com - JSON Server Edition
+# History.com - JSON Server Edition
 
 Uma aplicação web dinâmica desenvolvida com **React** e **Vite**, focada na visualização e gerenciamento de registros históricos. O projeto utiliza o **Bootstrap 5** para uma interface clássica e responsiva, e o **JSON Server** para simular uma API REST completa de forma simples e eficiente.
 
@@ -18,49 +17,69 @@ Uma aplicação web dinâmica desenvolvida com **React** e **Vite**, focada na v
 * **Bootstrap 5**: Framework CSS para layout e componentes responsivos.
 * **JSON Server**: API Mock para simulação de backend RESTful.
 * **React Icons**: Conjunto de ícones para melhorar a UX.
+* **TypeScript**: Tipagem estática para melhor desenvolvimento.
+* **Express.js**: Backend para API RESTful completa.
 
 ## 📁 Estrutura do Projeto
 
-history-dot-com-json-server/
-├── src/
-│   ├── components/   # Componentes da interface (Navbar, Cards, Modais)
-│   ├── pages/        # Telas principais (Home, Detalhes, Admin)
-│   ├── services/     # Configuração das chamadas à API
-│   └── App.jsx       # Rotas e ponto central da aplicação
-├── db.json           # Banco de dados simulado (JSON)
-├── public/           # Arquivos estáticos
-└── index.html        # Estrutura base
+view-source:/home/marthamarinho/Programming/git-clones/history-dot-com-json-server
 
 ## 🔧 Como rodar o projeto
-1. Pré-requisitos
+
+### Pré-requisitos
 Certifique-se de ter o Node.js instalado em sua máquina.
 
-2. Instalação
+### Instalação
 Clone o repositório e instale as dependências:
 
-Bash
-
+```bash
 git clone [https://github.com/mvdevelop/history-dot-com-json-server.git](https://github.com/mvdevelop/history-dot-com-json-server.git)
 cd history-dot-com-json-server
 npm install
-3. Iniciar o Backend (JSON Server)
-Em um terminal separado, inicie o servidor mock:
+```
 
-Bash
+### Iniciar os Servidores
 
-npx json-server --watch db.json --port 3001
-4. Iniciar o Frontend (Vite)
-No terminal principal, execute:
-
-Bash
-
+**Backend (Express.js):**
+```bash
+# No diretório backend
+cd backend
 npm run dev
+```
+
+**Frontend (Vite):**
+```bash
+# No diretório raiz do projeto
+cd history-dot-com-json-server
+npm run dev
+```
+
 Acesse: http://localhost:5173
 
+**Ou execute ambos simultaneamente:**
+```bash
+# Terminal 1
+cd backend
+npm run dev
+
+# Terminal 2
+cd history-dot-com-json-server
+npm run dev
+```
+
 ## 👨‍💻 Autor
+
 Desenvolvido por mvdevelop.
 
 GitHub: @mvdevelop
 
 ## 📄 Licença
+
 Este projeto está sob a licença MIT.
+
+## 📋 Próximos Passos
+
+1. **Configuração do Backend:** Execute `npm install` no diretório backend
+2. **Configuração do Frontend:** Execute `npm install` no diretório raiz
+3. **Teste:** Inicie ambos servidores e teste as funcionalidades CRUD
+4. **Documentação:** Atualize a documentação conforme necessário
