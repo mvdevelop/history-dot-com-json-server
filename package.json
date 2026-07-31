@@ -1,45 +1,129 @@
 {
-  "name": "history-dot-com",
+  "name": "history-dot-com-json-server",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "node dist/server.js",
-    "dev:server": "ts-node src/server/server.ts",
-    "json-server": "json-server --watch db.json --port 3001"
+  "description": "Professional History.com application - Full-stack historical content management platform with React frontend and Express.js backend, featuring TypeScript, REST APIs, and enterprise-grade architecture.",
+  "author": "mvdevelop",
+  "contributors": [
+    {
+      "name": "mvdevelop",
+      "email": "contact@mvdevelop.dev",
+      "url": "https://github.com/mvdevelop"
+    }
+  ],
+  "keywords": [
+    "history",
+    "historical",
+    "content management",
+    "fullstack",
+    "react",
+    "express",
+    "typescript",
+    "crud",
+    "api",
+    "rest",
+    "portfolio",
+    "enterprise",
+    "professional"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mvdevelop/history-dot-com-json-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvdevelop/history-dot-com-json-server",
+    "directory": "."
   },
+  "bugs": {
+    "url": "https://github.com/mvdevelop/history-dot-com-json-server/issues",
+    "email": "contact@mvdevelop.dev"
+  },
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/mvdevelop"
+    }
+  ],
+  "scripts": {
+    "start": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run dev\"",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "dev:host": "concurrently \"npm run dev:host:frontend\" \"npm run dev:host:backend\"",
+    "dev:host:frontend": "cd frontend && npm run dev:host",
+    "dev:host:backend": "cd backend && npm run dev:host",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && npm run lint",
+    "type-check": "npm run type-check:frontend && npm run type-check:backend",
+    "type-check:frontend": "cd frontend && npm run type-check",
+    "type-check:backend": "cd backend && npm run type-check",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd frontend && npm run test",
+    "test:backend": "cd backend && npm run test",
+    "test:coverage": "npm run test:coverage:frontend && npm run test:coverage:backend",
+    "test:coverage:frontend": "cd frontend && npm run test:coverage",
+    "test:coverage:backend": "cd backend && npm run test:coverage",
+    "clean": "npm run clean:frontend && npm run clean:backend",
+    "clean:frontend": "cd frontend && npm run clean",
+    "clean:backend": "cd backend && npm run clean",
+    "preinstall": "node --version || echo 'Please install Node.js 18 or higher'",
+    "postinstall": "echo 'History.com project dependencies installed successfully. Ready to develop!' && npm run prepare:all",
+    "prepare:all": "cd frontend && npm run prepare && cd ../backend && npm run prepare",
+    "deploy": "echo 'Deployment commands will be added. See README.md for deployment instructions.'",
+    "docker:build": "docker build -t history-dot-com . .",
+    "docker:dev": "docker-compose -f docker-compose.dev.yml up -d",
+    "docker:prod": "docker-compose -f docker-compose.prod.yml up -d --build",
+    "docs": "echo 'Documentation commands will be implemented. See README.md for project documentation.'",
+    "security": "echo 'Security audit commands: npm audit, npm audit fix'",
+    "performance": "echo 'Performance analysis commands: npm run build:analyze in frontend and backend'"
+  },
+  "engines": {
+    "node": ">= 18.0.0",
+    "npm": ">= 9.0.0",
+    "yarn": ">= 1.0.0"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  },
+  "type": "module",
   "dependencies": {
-    "bootstrap": "^5.3.7",
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "json-server": "^1.0.0-beta.3",
-    "node": "^22.17.0",
-    "react": "^19.1.0",
-    "react-bootstrap": "^2.10.10",
-    "react-dom": "^19.1.0",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^7.6.3"
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.29.0",
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.17.3",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react": "^4.5.2",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9.29.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.2.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.0"
-  }
+    "npm-force-resolutions": "^0.0.10",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "index.js",
+  "files": [
+    "frontend/",
+    "backend/",
+    "*.md",
+    "*.json",
+    "*.env*",
+    "README.md",
+    "CONTRIBUTING.md",
+    "development-log.md",
+    "LICENSE"
+  ],
+  "packageManager": "npm@10.0.0",
+  "description": "Professional History.com application - Full-stack historical content management platform with React frontend and Express.js backend, featuring TypeScript, REST APIs, and enterprise-grade architecture."
 }

@@ -1,26 +1,117 @@
 {
   "name": "history-dot-com-backend",
   "version": "1.0.0",
-  "description": "Backend API server for History.com",
+  "description": "Professional Express.js backend API server for History.com - Full CRUD operations with TypeScript, production-ready architecture, and comprehensive security features.",
   "main": "dist/server.js",
-  "scripts": {
-    "start": "node dist/server.js",
-    "dev": "ts-node src/server/server.ts",
-    "build": "tsc",
-    "lint": "eslint ."
-  },
-  "keywords": ["history", "api", "server"],
   "author": "mvdevelop",
   "license": "MIT",
+  "keywords": [
+    "express",
+    "typescript",
+    "api",
+    "rest",
+    "crud",
+    "backend",
+    "fullstack",
+    "production",
+    "enterprise",
+    "professional",
+    "developer",
+    "portfolio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvdevelop/history-dot-com-json-server",
+    "directory": "backend"
+  },
+  "bugs": {
+    "url": "https://github.com/mvdevelop/history-dot-com-json-server/issues",
+    "email": "contact@mvdevelop.dev"
+  },
+  "homepage": "https://github.com/mvdevelop/history-dot-com-json-server/tree/main/backend",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node --transpile-only src/server/server.ts",
+    "dev:with-inspector": "ts-node --inspect src/server/server.ts",
+    "dev:debugger": "node --inspect-brk dist/server.js",
+    "build": "rimraf dist && tsc",
+    "build:analyze": "tsc --noEmit && npx webpack-bundle-analyzer dist/server.js",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "clean": "rimraf dist coverage .nyc_output",
+    "preinstall": "node --version || echo 'Please install Node.js 18 or higher'",
+    "postinstall": "echo 'Backend dependencies installed successfully. Server ready to start!'",
+    "prepare": "husky install"
+  },
+  "engines": {
+    "node": ">= 18.0.0",
+    "npm": ">= 9.0.0"
+  },
+  "type": "module",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    "compression": "^1.32.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.5",
     "@types/express": "^4.17.21",
     "@types/node": "^20.17.3",
+    "@types/morgan": "^1.10.1",
+    "@types/compression": "^1.7.4",
     "eslint": "^9.29.0",
+    "eslint-config-airbnb-base": "^15.0.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-typescript-sort": "^3.0.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.8.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.0",
+    "jest-transform-stub": "^2.0.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "rimraf": "^5.0.1",
+    "webpack-bundle-analyzer": "^4.10.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "*.md",
+    "*.json",
+    "*.config.js",
+    "*.config.ts",
+    "README.md"
+  ],
+  "main": "dist/server.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/mvdevelop"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run type-check"
+    }
   }
 }

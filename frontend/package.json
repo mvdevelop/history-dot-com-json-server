@@ -1,0 +1,187 @@
+{
+  "name": "history-dot-com-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Professional React frontend for History.com - Full-stack historical content management platform with TypeScript, modern web development practices, and enterprise-grade features.",
+  "author": "mvdevelop",
+  "contributors": [
+    {
+      "name": "mvdevelop",
+      "email": "contact@mvdevelop.dev",
+      "url": "https://github.com/mvdevelop"
+    }
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "history",
+    "fullstack",
+    "crud",
+    "api",
+    "management",
+    "web application",
+    "enterprise",
+    "professional",
+    "developer portfolio"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mvdevelop/history-dot-com-json-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvdevelop/history-dot-com-json-server",
+    "directory": "frontend"
+  },
+  "bugs": {
+    "url": "https://github.com/mvdevelop/history-dot-com-json-server/issues",
+    "email": "contact@mvdevelop.dev"
+  },
+  "funding": [
+    {
+      "type": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/mvdevelop"
+    }
+  ],
+  "scripts": {
+    "dev": "vite --mode development",
+    "dev:host": "vite --host --mode development",
+    "dev:with-inspector": "vite --open --mode development",
+    "build": "tsc && vite build --mode production",
+    "build:analyze": "tsc && vite build --mode production --report",
+    "preview": "vite preview --mode production",
+    "preview:host": "vite preview --host --mode production",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest --watch",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "clean": "rimraf dist node_modules .vite coverage",
+    "preinstall": "node --version || echo 'Please install Node.js 18 or higher'",
+    "postinstall": "echo 'Frontend dependencies installed successfully. Ready to develop!'",
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "deploy": "npm run build && gh-pages -d dist",
+    "serve": "vite serve --mode production"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.3",
+    "react-bootstrap": "^2.10.10",
+    "bootstrap": "^5.3.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@testing-library/jest-dom": "^9.2.0",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/bootstrap": "^5.2.10",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "@vitest/ui": "^2.1.9",
+    "@vitest/coverage-v8": "^2.1.9",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-typescript-sort": "^3.0.0",
+    "globals": "^16.2.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "sass": "^1.79.4",
+    "sass-loader": "^16.0.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0",
+    "vite-plugin-eslint": "^1.9.1",
+    "vite-plugin-html": "^1.0.0",
+    "vite-plugin-image-optimizer": "^1.1.7",
+    "vite-plugin-mkcert": "^1.2.0",
+    "vite-pluginSSR": "^5.0.1",
+    "vitest": "^2.1.9",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "rimraf": "^5.0.1",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.0",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "identity-obj-proxy": "^3.0.0",
+    "msw": "^2.6.8",
+    "playwright": "^1.49.1",
+    "axe-core": "^4.10.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "react-error-boundary": "^4.1.0",
+    "axios": "^1.7.8",
+    "date-fns": "^3.1.0",
+    "date-fns-tz": "^3.0.1",
+    "immer": "^10.1.0",
+    "query-string": "^9.1.2",
+    "framer-motion": "^11.11.2",
+    "react-debounce-input": "^3.0.1",
+    "react-helmet-async": "^2.0.1",
+    "react-intersection-observer": "^9.13.0",
+    "react-loading-skeleton": "^3.5.0",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-markdown": "^9.0.1",
+    "react-responsive": "^10.0.0",
+    "react-toastify": "^10.0.7",
+    "socket.io-client": "^4.8.1",
+    "swr": "^2.3.3",
+    "zod": "^3.24.2",
+    "lucide-react": "^0.468.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  },
+  "engines": {
+    "node": ">= 18.0.0",
+    "npm": ">= 9.0.0",
+    "yarn": ">= 1.0.0"
+  },
+  "main": "./index.ts",
+  "files": [
+    "dist/",
+    "src/",
+    "public/",
+    "*.md",
+    "*.json",
+    "*.config.js",
+    "*.config.ts",
+    "LICENSE"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/mvdevelop"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "packageManager": "npm@10.0.0"
+}
